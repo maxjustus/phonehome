@@ -5,14 +5,26 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/alecthomas/kong"
 	"github.com/snadrus/metaphone3"
 )
 
-func main() {
-	fmt.Println("starting")
-	scanner := bufio.NewScanner(os.Stdin)
+var cli struct {
+	Vowels bool `help:"Makes metaphone3 encode non-initial vowels" default:"false"`
+	Exact  bool `help:"Makes metaphone3 encode consonants as exactly as possible." default:"false"`
+}
 
+func main() {
+	fmt.Fprintln(os.Stderr, "Listening on stdin")
+
+	kong.Parse(&cli)
+
+	scanner := bufio.NewScanner(os.Stdin)
 	encoder := metaphone3.New()
+
+	encoder.SetEncodeVowels(cli.Vowels)
+	encoder.SetEncodeExact(cli.Exact)
+
 	for scanner.Scan() {
 		word := scanner.Text()
 

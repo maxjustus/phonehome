@@ -1,2 +1,4 @@
+github.com/alecthomas/kong v0.8.0 h1:ryDCzutfIqJPnNn0omnrgHLbAggDQM2VWHikE1xqK7s=
+github.com/alecthomas/kong v0.8.0/go.mod h1:n1iCIO2xS46oE8ZfYCNDqdR0b0wZNrXAIAqro/2132U=
 github.com/snadrus/metaphone3 v0.0.0-20211121025740-d4a16aba8e3f h1:0DP20kIsqhjJ+2498zX5yhcuRh/TPt/KWfkKovZJNBY=
 github.com/snadrus/metaphone3 v0.0.0-20211121025740-d4a16aba8e3f/go.mod h1:SH7F2jeEa6eDqwYUf+TVj7KCqFyEzmexb+mPqQ3jvvg=
