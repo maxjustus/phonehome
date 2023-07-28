@@ -1,0 +1,46 @@
+<functions>
+    <function>
+        <type>executable_pool</type>
+        <name>metaphone3</name>
+        <return_type>Array(String)</return_type>
+        <argument>
+            <type>String</type>
+            <name>value</name>
+        </argument>
+        <format>TabSeparated</format>
+        <command>phonehome</command>
+    </function>
+    <function>
+        <type>executable_pool</type>
+        <name>metaphone3Vowels</name>
+        <return_type>Array(String)</return_type>
+        <argument>
+            <type>String</type>
+            <name>value</name>
+        </argument>
+        <format>TabSeparated</format>
+        <command>phonehome --vowels</command>
+    </function>
+    <function>
+        <type>executable_pool</type>
+        <name>metaphone3Exact</name>
+        <return_type>Array(String)</return_type>
+        <argument>
+            <type>String</type>
+            <name>value</name>
+        </argument>
+        <format>TabSeparated</format>
+        <command>phonehome --exact</command>
+    </function>
+    <function>
+        <type>executable_pool</type>
+        <name>metaphone3VowelsExact</name>
+        <return_type>Array(String)</return_type>
+        <argument>
+            <type>String</type>
+            <name>value</name>
+        </argument>
+        <format>TabSeparated</format>
+        <command>phonehome --vowels --exact</command>
+    </function>
+</functions>

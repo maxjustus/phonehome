@@ -1,0 +1,12 @@
+version: '3'
+services:
+  clickhouse:
+    image: yandex/clickhouse-server:latest
+    ports:
+      - '8123:8123'
+      - '9000:9000'
+    volumes:
+      - ./phonehome:/var/lib/clickhouse/user_scripts/phonehome
+      - ./phonehome_function.xml:/etc/clickhouse-server/phonehome_function.xml
+    restart: always
+
